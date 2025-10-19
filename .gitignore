@@ -1,0 +1,5 @@
+/target
+# ignore all the environment files
+.env
+.env.*
+# Even in the subdirectories

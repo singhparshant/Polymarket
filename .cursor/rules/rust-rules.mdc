@@ -1,0 +1,10 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+- Every time i ask about somehitng in rust, try to give analogy with typescript or js or C++ since i am new to rust , beginner. 
+- Polymarket documentation is available at https://docs.polymarket.com/
+- Always refer to the documentation when writing code.
+- Keep the code concise and as minimal as possible.
+- 
