@@ -3,20 +3,6 @@ Experimental and not production ready.
 
 ## Polymarket Market-Making Bot — High-Level Architecture
 
-### Components
-
-┌───────────────────┐ MarketUpdate ┌────────────────────┐ BotCommand ┌───────────────────┐
-│ WebSocket (MKTs) │ ────────────────▶ │ Trading Logic │ ───────────────▶ │ Order Execution │
-│ book + price_change│ │ (Strategy Engine) │ │ (REST API) │
-└───────────────────┘ └────────────────────┘ └───────────────────┘
-│ │ │
-▼ ▼ ▼
-┌───────────────────┐ ┌────────────────────┐ ┌───────────────────┐
-│ User WebSocket │ Inventory │ Shared AppState │ Periodic stats │ Monitor Task │
-│ (fills / orders) │ ───────────────▶ │ (Arc<Mutex<>>) │ ───────────────▶ │ (5s display) │
-└───────────────────┘ └────────────────────┘ └───────────────────┘
----
-
 ### Data Sources
 
 - **Market WebSocket (`websocket.rs`)**
